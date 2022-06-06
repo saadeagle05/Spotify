@@ -31,7 +31,7 @@ or
 
 1. Vaya a su carpeta de instalación de Spotify `%APPDATA%\Spotify`
 2. Renombra `chrome_elf.dll` to `chrome_elf_bak.dll`. El nombre es importante.
-3. Descarga `chrome_elf.zip` de [releases](https://github.com/5qw/Spotify/releases)
+3. Descarga `chrome_elf.zip` de [releases](https://github.com/5qw/5p0t1fy/releases)
 4. Descomprime `chrome_elf.dll` y `config.ini` a la carpeta de Spotify. 
 
 ### Desinstalación:
