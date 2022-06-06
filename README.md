@@ -1,5 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/31l6ynm0a1fhr2vs/branch/master?svg=true)](https://ci.appveyor.com/project/mrpond/blockthespot/branch/master)
-
 <center>
     <h1 align="center">AdBlock Spotify</h1>
     <h4 align="center">Un bloqueador de anuncios para Spotify en WINDOWS.</h4>
