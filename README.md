@@ -1,6 +1,6 @@
 <center>
     <h1 align="center">🔰 AdBlock Spotify 🔰</h1>
-    <h4 align="center">:warning: Este bloqueador es para la versión de <a href="https://www.spotify.com/download/windows/"> 𝑬𝑺𝑪𝑹𝑰𝑻𝑶𝑹𝑰𝑶 de Spotify en Windows y 𝗻𝗼 𝗽𝗮𝗿𝗮 𝗹𝗮 𝘃𝗲𝗿𝘀𝗶ó𝗻 𝗱𝗲 𝗺𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝘀𝘁𝗼𝗿𝗲. </a> </h4>
+    <h4 align="center">:warning: Este bloqueador es para la versión de <a href="https://www.spotify.com/download/windows/"> 𝑬𝑺𝑪𝑹𝑰𝑻𝑶𝑹𝑰𝑶 de Spotify en Windows y 𝗡𝗢 𝗽𝗮𝗿𝗮 𝗹𝗮 𝘃𝗲𝗿𝘀𝗶ó𝗻 𝗱𝗲 𝗺𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝘀𝘁𝗼𝗿𝗲. </a> </h4>
     <h5 align="center"> <a href="https://www.spotify.com/premium/">💲 Apoya a Spotify comprando premium 💲</a> </h5>
 </center>
 
