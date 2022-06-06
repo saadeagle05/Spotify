@@ -1,7 +1,7 @@
 <center>
     <h1 align="center">🔰 AdBlock Spotify 🔰</h1>
     <h4 align="center">Un bloqueador de anuncios para Spotify en WINDOWS.</h4>
-    <h5 align="center"> <a href="https://www.spotify.com/premium/">💲 Apoya a Spotify comprando premium 💲 </h5>
+    <h5 align="center"> <a href="https://www.spotify.com/premium/">💲 Apoya a Spotify comprando premium 💲</a> </h5>
 </center>
 
 🧱 » 𝗔𝗻𝘁𝗲𝘀 𝗱𝗲 𝗶𝗻𝘀𝘁𝗮𝗹𝗮𝗿 (𝗼𝗽𝗰𝗶𝗼𝗻𝗮𝗹 𝘆 𝘀𝗼𝗹𝗼 𝗽𝗼𝗿 𝘀𝗲𝗴𝘂𝗿𝗶𝗱𝗮𝗱):
