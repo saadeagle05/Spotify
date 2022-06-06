@@ -14,7 +14,7 @@
 * Conserva la funcionalidad de amigo, video vertical y radio
 * Desbloquea la función de saltar cualquier canción
 
-⚙️ » 𝗜𝗻𝘀𝘁𝗮𝗹𝗮𝗰𝗶ó𝗻:
+⚙️ » <b> <u> Instalación recomendada </b> </u>:
 * Simplemente descarga y ejecuta [AdBlock Spotify.bat](https://raw.githack.com/5qw/5p0t1fy/master/AdBlock%20Spotify.bat)  
 
 <hr>
