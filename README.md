@@ -1,6 +1,6 @@
 <center>
     <h1 align="center">🔰 AdBlock Spotify 🔰</h1>
-    <h4 align="center">Un bloqueador de anuncios para Spotify en WINDOWS.</h4>
+    <h4 align="center">:warning: Este bloqueador es para la versión de [**ESCRITORIO**](https://www.spotify.com/download/windows/) de Spotify en Windows y **no para la versión de microsoft store**.</h4>
     <h5 align="center"> <a href="https://www.spotify.com/premium/">💲 Apoya a Spotify comprando premium 💲</a> </h5>
 </center>
 
@@ -13,8 +13,6 @@
 * Bloquea todos los anuncios de banner/video/audio dentro de la aplicación
 * Conserva la funcionalidad de amigo, video vertical y radio
 * Desbloquea la función de saltar cualquier canción
-
-:warning: Este bloqueador es para la versión de [**ESCRITORIO**](https://www.spotify.com/download/windows/) de Spotify en Windows y **no para la versión de microsoft store**.
 
 ⚙️ » 𝗜𝗻𝘀𝘁𝗮𝗹𝗮𝗰𝗶ó𝗻:
 * Simplemente descarga y ejecuta [AdBlock Spotify.bat](https://raw.githack.com/5qw/5p0t1fy/master/AdBlock%20Spotify.bat)  
