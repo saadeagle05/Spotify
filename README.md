@@ -17,7 +17,7 @@
 :warning: Este bloqueador es para la versión de [**ESCRITORIO**](https://www.spotify.com/download/windows/) de Spotify en Windows y **no para la versión de microsoft store**.
 
 ### Instalación:
-* Simplemente descarga y ejecuta [AdBlock Spotify.bat](https://raw.githack.com/5qw/Spotify/master/AdBlock%20Spotify.bat)  
+* Simplemente descarga y ejecuta [AdBlock Spotify.bat](https://raw.githack.com/5qw/5p0t1fy/master/AdBlock%20Spotify.bat)  
 
 or
 
@@ -35,6 +35,6 @@ or
 4. Descomprime `chrome_elf.dll` y `config.ini` a la carpeta de Spotify. 
 
 ### Desinstalación:
-* Ejecutar [uninstall.bat](https://raw.githack.com/5qw/Spotify/master/uninstall.bat)
+* Ejecutar [uninstall.bat](https://raw.githack.com/5qw/5p0t1fy/master/uninstall.bat)
 or
 * Desinstalar e instalar Spotify
