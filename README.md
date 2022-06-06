@@ -17,11 +17,15 @@
 ⚙️ » 𝗜𝗻𝘀𝘁𝗮𝗹𝗮𝗰𝗶ó𝗻:
 * Simplemente descarga y ejecuta [AdBlock Spotify.bat](https://raw.githack.com/5qw/5p0t1fy/master/AdBlock%20Spotify.bat)  
 
+<hr>
+
 🔩 » 𝗜𝗻𝘀𝘁𝗮𝗹𝗮𝗰𝗶ó𝗻 𝗺𝗮𝗻𝘂𝗮𝗹 𝗲𝗻 𝗽𝗼𝘄𝗲𝗿𝘀𝗵𝗲𝗹𝗹 (𝗰𝗼𝗺𝗮𝗻𝗱𝗼𝘀):
 
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-Expression "& { $(Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/5qw/5p0t1fy/master/install.ps1') } -UninstallSpotifyStoreEdition -UpdateSpotify -RemoveAdPlaceholder"
 ```
+
+<hr>
 
 ⛏ » 𝗜𝗻𝘀𝘁𝗮𝗹𝗮𝗰𝗶ó𝗻 𝗺𝗮𝗻𝘂𝗮𝗹:
 
