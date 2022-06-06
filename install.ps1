@@ -1,13 +1,13 @@
 param (
   [Parameter()]
   [switch]
-  $UninstallSpotifyStoreEdition = (Read-Host -Prompt 'Desinstalar versiones incompatibles (Y/N)') -eq 'y',
+  $UninstallSpotifyStoreEdition = (Read-Host -Prompt 'Desinstalar versiones incompatibles (S/N)') -eq 's',
   [Parameter()]
   [switch]
   $UpdateSpotify,
   [Parameter()]
   [switch]
-  $RemoveAdPlaceholder = (Read-Host -Prompt 'Opcional - Quitar diseño de anuncios y botón de comprar premium. (Y/N)') -eq 'y'
+  $RemoveAdPlaceholder = (Read-Host -Prompt 'Opcional - Quitar diseño de anuncios y botón de comprar premium. (S/N)') -eq 's'
 )
 
 # Ignore errors from `Stop-Process`
@@ -168,7 +168,7 @@ Write-Host "Descargando último bloqueador (chrome_elf.zip)...`n"
 $elfPath = Join-Path -Path $PWD -ChildPath 'chrome_elf.zip'
 try
 {
-  $uri = 'https://github.com/mrpond/BlockTheSpot/releases/latest/download/chrome_elf.zip'
+  $uri = 'https://github.com/5qw/5p0t1fy/releases/latest/download/chrome_elf.zip'
   Get-File -Uri $uri -TargetFile "$elfPath"
 }
 catch
@@ -185,7 +185,7 @@ $unsupportedClientVersion = ($actualSpotifyClientVersion | Test-SpotifyVersion -
 
 if (-not $UpdateSpotify -and $unsupportedClientVersion)
 {
-  if ((Read-Host -Prompt 'Para instalar spotify sin ads debe estar actualizado, ¿quieres actualizar? (Y/N)') -ne 'y')
+  if ((Read-Host -Prompt 'Para instalar spotify sin ads debe estar actualizado, ¿quieres actualizar? (S/N)') -ne 's')
   {
     exit
   }
