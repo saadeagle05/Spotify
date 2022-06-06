@@ -36,5 +36,4 @@
 
 📦 » <b> Desinstalación: </b>
 * Ejecutar [uninstall.bat](https://raw.githack.com/5qw/5p0t1fy/master/uninstall.bat)
-or
 * Desinstalar e instalar Spotify
