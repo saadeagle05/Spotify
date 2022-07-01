@@ -1,26 +1,26 @@
 @echo off
 echo *****************
-echo Author: @xyz
+echo Author: @rednek46
 echo *****************
-echo Borrando bloqueador
+echo Removing Patch
 if exist "%APPDATA%\Spotify\chrome_elf_bak.dll" (
-    del /s /q "%APPDATA%\Spotify\chrome_elf.dll" > NUL 2>&1
+    del /s /q "%APPDATA%\Spotify\chrome_elf_bak.dll" > NUL 2>&1
     move "%APPDATA%\Spotify\chrome_elf_bak.dll" "%APPDATA%\Spotify\chrome_elf.dll" > NUL 2>&1
 ) else (
-    echo Hecho
+    echo done
 )
 
 if exist "%APPDATA%\Spotify\Apps\zlink.spa.bak" (
     del /s /q "%APPDATA%\Spotify\Apps\zlink.spa" > NUL 2>&1
     move "%APPDATA%\Spotify\Apps\zlink.spa.bak" "%APPDATA%\Spotify\Apps\zlink.spa" > NUL 2>&1
 ) else (
-    echo Hecho
+    echo done
 )
 
 if exist "%APPDATA%\Spotify\Apps\xpui.spa.bak" (
     del /s /q "%APPDATA%\Spotify\Apps\xpui.spa" > NUL 2>&1
     move "%APPDATA%\Spotify\Apps\xpui.spa.bak" "%APPDATA%\Spotify\Apps\xpui.spa" > NUL 2>&1
 ) else (
-    echo Hecho
+    echo done
 )
 pause
