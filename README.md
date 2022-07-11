@@ -15,14 +15,14 @@
 * Desbloquea la función de saltar cualquier canción
 
 ⚙️ » <b> Instalación recomendada:</b>
-* Simplemente [descarga la ultima versión](https://github.com/5qw/5p0t1fy/archive/refs/tags/1.0203920392093.zip) y ejecuta `AdBlock Spotify.bat`. 
+* Simplemente [descarga la ultima versión](https://github.com/5qw/Spotify/archive/refs/tags/1.0203920392093.zip) y ejecuta `AdBlock Spotify.bat`. 
 
 <hr>
 
 🔩 » <b> Instalación manual (comandos):</b>
 
 ```powershell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-Expression "& { $(Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/5qw/5p0t1fy/master/install.ps1') } -UninstallSpotifyStoreEdition -UpdateSpotify -RemoveAdPlaceholder"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-Expression "& { $(Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/5qw/Spotify/master/install.ps1') } -UninstallSpotifyStoreEdition -UpdateSpotify -RemoveAdPlaceholder"
 ```
 
 <hr>
@@ -31,9 +31,9 @@
 
 1. Vaya a su carpeta de instalación de Spotify `%APPDATA%\Spotify`
 2. Renombra `chrome_elf.dll` to `chrome_elf_bak.dll`. El nombre es importante.
-3. Descarga `chrome_elf.zip` de [releases](https://github.com/5qw/5p0t1fy/releases)
+3. Descarga `chrome_elf.zip` de [releases](https://github.com/5qw/Spotify/releases)
 4. Descomprime `chrome_elf.dll` y `config.ini` a la carpeta de Spotify. 
 
 📦 » <b> Desinstalación: </b>
-* Ejecutar [uninstall.bat](https://raw.githack.com/5qw/5p0t1fy/master/uninstall.bat)
+* Ejecutar [uninstall.bat](https://raw.githack.com/5qw/Spotify/master/uninstall.bat)
 * Desinstalar e instalar Spotify
