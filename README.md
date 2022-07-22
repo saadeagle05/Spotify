@@ -1,18 +1,19 @@
-<center>
-    <h1 align="center">🔰 AdBlock Spotify 🔰</h1>
-    <h4 align="center">:warning: Este bloqueador es para la versión de <a href="https://www.spotify.com/download/windows/">𝑬𝑺𝑪𝑹𝑰𝑻𝑶𝑹𝑰𝑶</a> de Spotify en Windows y 𝗡𝗢 𝗽𝗮𝗿𝗮 𝗹𝗮 𝘃𝗲𝗿𝘀𝗶ó𝗻 𝗱𝗲 𝗺𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝘀𝘁𝗼𝗿𝗲. </a> </h4>
-    <h5 align="center"> <a href="https://www.spotify.com/premium/">💲 Apoya a Spotify comprando premium 💲</a> </h5>
-</center>
+## <p align="center"> 🔰 AdBlock Spotify 🔰</p>
+<!--<p align="center">:warning: Este bloqueador es UNICAMENTE para la versión de <a href="https://www.spotify.com/download/windows/">ESCRITORIO</a> de Spotify </a></p>-->
+<p align="center"><a href="https://www.spotify.com/premium/">💲 Apoya a Spotify comprando premium 💲</a> </p>
+
+<p align="center"> <img src="https://img.shields.io/github/stars/5qw/Spotify?label=Stars"> <img src="https://img.shields.io/badge/license-MIT-green.svg?label=License"> </p>
+
+## 🧩 » <b> Información: </b>
+Este repositorio contiene los archivos necesarios para bloquear anuncios en Spotify. El dueño del repositorio no se hace responsable de ninguna consecuencia que le ocurra al usuario que use este programa. <br> Características que se ofrecen:
+* Bloquea todos los anuncios de banner/video/audio dentro de la aplicación
+* Conserva la funcionalidad de amigo, video vertical y radio
+* Desbloquea la función de saltar cualquier canción
 
 ## 🧱 » <b> Antes de instalar (opcional): </b>
 1. Actualice Windows, actualice Spotify y actualice este instalador
 2. Vaya a "Seguridad de Windows" ➞ "Protección contra virus y amenazas"
 3. Haga clic en "Amenazas permitidas" ➞ "Eliminar todas las amenazas permitidas"
-
-## 🧩 » <b> Características: </b>
-* Bloquea todos los anuncios de banner/video/audio dentro de la aplicación
-* Conserva la funcionalidad de amigo, video vertical y radio
-* Desbloquea la función de saltar cualquier canción
 
 ## ⚙️ » <b> Instalación recomendada:</b>
 * Simplemente [descarga la ultima versión](https://github.com/5qw/Spotify/releases/latest/download/Spotify.rar) y ejecuta `AdBlock Spotify.bat`. 
