@@ -11,7 +11,7 @@ Este repositorio contiene los archivos necesarios para bloquear anuncios en Spot
 * Desbloquea la función de saltar cualquier canción
 
 ## ⚙️ » <b> Instalación recomendada:</b>
-* Simplemente [descarga y ejecuta la ultima versión](https://github.com/5qw/Spotify/releases/latest/download/Install.bat).
+* Simplemente [ejecuta la ultima versión](https://github.com/5qw/Spotify/releases/latest/download/Install.bat).
 
 ## 🔩 » <b> Instalación manual (comandos):</b>
 
