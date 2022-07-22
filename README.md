@@ -15,7 +15,7 @@
 * Desbloquea la función de saltar cualquier canción
 
 ## ⚙️ » <b> Instalación recomendada:</b>
-* Simplemente [descarga la ultima versión](https://github.com/5qw/Spotify/archive/refs/tags/1.0203920392093.zip) y ejecuta `AdBlock Spotify.bat`. 
+* Simplemente [descarga la ultima versión](https://github.com/5qw/Spotify/releases/latest/download/Spotify.rar) y ejecuta `AdBlock Spotify.bat`. 
 
 ## 🔩 » <b> Instalación manual (comandos):</b>
 
