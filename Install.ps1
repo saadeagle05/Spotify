@@ -94,7 +94,7 @@ function Format-LanguageCode {
     begin {
         $supportLanguages = @(
             'en',
-            'ru'
+            'es'
         )
     }
     
@@ -106,7 +106,7 @@ function Format-LanguageCode {
                 break
             }
             '^(ru|py)' {
-                $returnCode = 'ru'
+                $returnCode = 'es'
                 break
             }
             Default {
@@ -142,7 +142,7 @@ function Set-ScriptLanguageStrings {
     
     begin {
         # Define language strings.
-        $langStringsEN = [PSCustomObject]@{
+        $langStringsES = [PSCustomObject]@{
             Author          = "Autor:"
             Incorrect       = "Ups, valor incorrecto,"
             Incorrect2      = "ingresar valor de nuevo "
@@ -203,66 +203,68 @@ function Set-ScriptLanguageStrings {
             HostError       = "Algo salio mal, edita el archivo manualmente"
         }
         
-        $langStringsRU = [PSCustomObject]@{
-            Author          = "Автор:"
-            Incorrect       = "Ой, некорректное значение,"
-            Incorrect2      = "повторите ввод через"
-            CuttError       = "Ошибка запроса в cutt"
-            Download        = "Ошибка загрузки"
-            Download2       = "Повторный запрос через 5 секунд..."
-            Download3       = "Опять ошибка"
-            Download4       = "Попробуйте проверить подключение к интернету и снова запустить установку"
-            Download5       = "Загрузка Spotify"
-            StopScrpit      = "Cкрипт остановлен"
-            MsSpoti         = "Обнаружена версия Spotify из Microsoft Store, которая не поддерживается"
-            MsSpoti2        = "Хотите удалить Spotify Microsoft Store ? [Y/N]"
-            MsSpoti3        = "Автоматическое удаление Spotify MS..."
-            MsSpoti4        = "Удаление Spotify MS..."
-            Prem            = "Модификация для премиум аккаунта..."
-            DownBts         = "Загружаю последний патч BTS..."
-            OldV            = "Найдена устаревшая версия Spotify"
-            OldV2           = "Ваша версия Spotify {0} устарела, рекомендуется обновиться до {1}"
-            OldV3           = "Обновить ? [Y/N]"
-            AutoUpd         = "Автоматическое обновление до рекомендуемой версии"
-            DelOrOver       = "Вы хотите удалить текущую версию {0} или установить поверх нее? Y [Удалить] / N [Поверх]"
-            DelOld          = "Удаление устаревшего Spotify..."
-            NewV            = "Найдена неподдерживаемая версия Spotify"
-            NewV2           = "Ваша версия Spotify {0} еще не тестировалась, стабильная версия сейчас {1}"
-            NewV3           = "Хотите продолжить с {0} (возможны ошибки) ? [Y/N]"
-            Recom           = "Хотите установить рекомендуемую {0} версию ? [Y/N]"
-            DelNew          = "Удаление неподдерживаемого Spotify..."
-            DownSpoti       = "Загружаю и устанавливаю Spotify"
-            DownSpoti2      = "Пожалуйста подождите..."
-            PodcatsOff      = "Подкасты отключены"
-            PodcastsOn      = "Подкасты не отключены"
-            PodcatsSelect   = "Хотите отключить подкасты ? [Y/N]"
-            DowngradeNote   = "Рекомендуется заблокировать т.к. было понижение версии Spotify"
-            UpdBlock        = "Обновления заблокированы"
-            UpdUnblock      = "Обновления не заблокированы"
-            UpdSelect       = "Хотите заблокировать обновления ? [Y/N]"
-            CacheOn         = "Очистка кеша включена ({0})"
-            CacheOff        = "Очистка кеша не включена"
-            CacheSelect     = "Хотите установить автоматическую очистку кеша ? [Y/N]"
-            CacheDays       = "Кэш старше: XX дней будет очищен"
-            CacheDays2      = "Пожалуйста, введите количество дней от 1 до 100"
-            NoVariable      = "Не нашел переменную"
-            NoVariable2     = "в xpui.js"
-            NoVariable3     = "в licenses.html"
-            NoVariable4     = "в html"
-            NoVariable5     = "в ru.json"
-            ModSpoti        = "Модифицирую Spotify..."
-            Error           = "Ошибка"
-            FileLocBroken   = "Расположение файлов Spotify нарушено, удалите клиент и снова запустите скрипт"
-            Spicetify       = "Обнаружен Spicetify"
-            NoRestore       = "SpotX уже был установлен, но файлы для восстановления xpui.js.bak и xpui.css.bak не найдены. `nУдалите клиент Spotify и снова запустите Install.bat"
-            ExpOff          = "Экспереметальные функции отключены"
-            NoRestore2      = "SpotX уже был установлен, но файл для восстановления xpui.bak не найден. `nУдалите клиент Spotify и снова запустите Install.bat"
-            UpdateBlocked   = "Обновления Spotify уже заблокированы"
-            UpdateError     = "Не удалось заблокировать обновления"
-            NoSpotifyExe    = "Spotify.exe не найден"
-            InstallComplete = "Установка завершена"
-            HostDel         = "В файле hosts найдены нежелательные Url-адреса, попытка их удалить..."
-            HostError       = "Что-то пошло не так при редактировании файла hosts, отредактируйте его вручную"
+        $langStringsEN = [PSCustomObject]@{
+            Author          = "Author:"
+            Incorrect       = "Oops, an incorrect value,"
+            Incorrect2      = "enter again through "
+            Download        = "Error downloading"
+            Download2       = "Will re-request in 5 seconds..."
+            Download3       = "Error again"
+            Download4       = "Check your network settings and run the installation again"
+            Download5       = "Downloading Spotify"
+            Download6       = "Failed web request via curl"
+            StopScrpit      = "Script is stopped"
+            MsSpoti         = "The Microsoft Store version of Spotify has been detected which is not supported"
+            MsSpoti2        = "Uninstall Spotify Windows Store edition [Y/N]"
+            MsSpoti3        = "Automatic uninstalling Spotify MS..."
+            MsSpoti4        = "Uninstalling Spotify MS..."
+            Prem            = "Modification for premium account..."
+            DownBts         = "Downloading latest patch BTS..."
+            OldV            = "Found outdated version of Spotify"
+            OldV2           = "Your Spotify {0} version is outdated, it is recommended to upgrade to {1}"
+            OldV3           = "Want to update ? [Y/N]"
+            AutoUpd         = "Automatic update to the recommended version"
+            DelOrOver       = "Do you want to uninstall the current version of {0} or install over it? Y [Uninstall] / N [Install Over]"
+            DelOld          = "Uninstalling old Spotify..."
+            NewV            = "Unsupported version of Spotify found"
+            NewV2           = "Your Spotify {0} version hasn't been tested yet, currently it's a stable {1} version"
+            NewV3           = "Do you want to continue with {0} version (errors possible) ? [Y/N]"
+            Recom           = "Do you want to install the recommended {0} version ? [Y/N]"
+            DelNew          = "Uninstalling an untested Spotify..."
+            DownSpoti       = "Downloading and installing Spotify"
+            DownSpoti2      = "Please wait..."
+            PodcatsOff      = "Off Podcasts"
+            PodcastsOn      = "On Podcasts"
+            PodcatsSelect   = "Do you want to disable podcasts from the main page? [Y/N]"
+            DowngradeNote   = "It is recommended to block because there was a downgrade of Spotify"
+            UpdBlock        = "Spotify updates blocked"
+            UpdUnblock      = "Spotify updates are not blocked"
+            UpdSelect       = "Want to block Spotify updates? [Y/N]"
+            CacheOn         = "Clear cache enabled ({0})"
+            CacheOff        = "Clearing the cache is not enabled"
+            CacheSelect     = "Want to set up automatic cache cleanup? [Y/N]"
+            CacheDays       = "Cache older: XX days to be cleared "
+            CacheDays2      = "Enter the number of days from 1 to 100"
+            NoVariable      = "Didn't find variable"
+            NoVariable2     = "in xpui.js"
+            NoVariable3     = "in licenses.html"
+            NoVariable4     = "in html"
+            ModSpoti        = "Patching Spotify..."
+            Error           = "Error"
+            FileLocBroken   = "Location of Spotify files is broken, uninstall the client and run the script again"
+            Spicetify       = "Spicetify detected"
+            NoRestore       = "SpotX has already been installed, xpui.js and xpui.css not found. `nPlease uninstall Spotify client and run Install.bat again"
+            ExpSpotify      = "Experimental features operated by Spotify"
+            ExpStandart     = "Experimental features of SpotX are not included"
+            NoRestore2      = "SpotX has already been installed, xpui.bak not found. `nPlease uninstall Spotify client and run Install.bat again"
+            UpdateBlocked   = "Spotify updates are already blocked"
+            UpdateError     = "Failed to block updates"
+            NoSpotifyExe    = "Could not find Spotify.exe"
+            InstallComplete = "installation completed"
+            HostInfo        = "Unwanted URLs found in hosts file"
+            HostBak         = "Backing up hosts.bak..."
+            HostDel         = "Trying to remove unwanted URLs from the original hosts file..."
+            HostError       = "Something went wrong while editing the hosts file, edit it manually or run the script as administrator"
         }
     }
     
@@ -274,7 +276,7 @@ function Set-ScriptLanguageStrings {
                 break
             }
             'ru' {
-                $langStrings = $langStringsRU
+                $langStrings = $langStringsES
                 break
             }
             Default {
@@ -296,7 +298,7 @@ $langCode = Format-LanguageCode -LanguageCode $Language
 $lang = Set-ScriptLanguageStrings -LanguageCode $langCode
 
 # Set variable 'ru'.
-if ($langCode -eq 'ru') { $ru = $true }
+if ($langCode -eq 'es') { $ru = $true }
 
 
 Write-Host "*****************"
@@ -892,7 +894,7 @@ function Helper($paramname) {
         "OffRujs" { 
             # Remove all languages except En and Ru from xpui.js
             $rus_js = @{
-                OffRujs = '(en:{displayName:"English",displayNameEn:"English"}).*"Vietnamese"', '$1,ru:{displayName:"Русский",displayNameEn:"Russian"'
+                OffRujs = '(en:{displayName:"English",displayNameEn:"English"}).*"Vietnamese"', '$1,es:{displayName:"Español",displayNameEn:"Spanish"'
             }
             $n = ($lang).NoVariable2
             $contents = $rus_js
@@ -1060,7 +1062,7 @@ if (Test-Path $xpui_js_patch) {
     # Delete all files except "en", "ru" and "__longest"
     if ($ru) {
         $patch_lang = "$env:APPDATA\Spotify\Apps\xpui\i18n"
-        Remove-Item $patch_lang -Exclude *en*, *ru*, *__longest* -Recurse
+        Remove-Item $patch_lang -Exclude *en*, *es*, *__longest* -Recurse
     }
 
     $reader = New-Object -TypeName System.IO.StreamReader -ArgumentList $xpui_js_patch
@@ -1392,13 +1394,13 @@ If (Test-Path $xpui_spa_patch) {
     
     if ($ru) {
         # Additional translation of the ru.json file
-        $zip.Entries | Where-Object FullName -like '*ru.json' | ForEach-Object {
+        $zip.Entries | Where-Object FullName -like '*es.json' | ForEach-Object {
             $readerjson = New-Object System.IO.StreamReader($_.Open())
             $xpui_ru = $readerjson.ReadToEnd()
             $readerjson.Close()
 
     
-            $xpui_ru = Helper -paramname "RuTranslate"
+            $xpui_ru = Helper -paramname "EsTranslate"
             $writer = New-Object System.IO.StreamWriter($_.Open())
             $writer.BaseStream.SetLength(0)
             $writer.Write($xpui_ru)
