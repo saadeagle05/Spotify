@@ -1,78 +1,78 @@
 param
 (
-    [Parameter(HelpMessage = 'Eliminar podcasts de la pagina principal.')]
+    [Parameter(HelpMessage = 'Eliminar podcasts del inicio.')]
     [switch]$podcasts_off,
     
-    [Parameter(HelpMessage = 'No eliminar podcasts de la pagina principal.')]
+    [Parameter(HelpMessage = 'No eliminar podcasts del inicio.')]
     [switch]$podcasts_on,
     
-    [Parameter(HelpMessage = 'Bloquear actualizaciones de Spotify.')]
+    [Parameter(HelpMessage = 'Bloquear actualizaciones automaticas de spotify.')]
     [switch]$block_update_on,
     
-    [Parameter(HelpMessage = 'No bloquear actualizaciones de Spotify.')]
+    [Parameter(HelpMessage = 'No loquear actualizaciones automaticas de spotify.')]
     [switch]$block_update_off,
     
-    [Parameter(HelpMessage = 'Activar borrado de datos.')]
+    [Parameter(HelpMessage = 'Habilitar borrado de cache.')]
     [switch]$cache_on,
     
-    [Parameter(HelpMessage = 'Especificar numero de dias. Por defecto son 7 dias.')]
+    [Parameter(HelpMessage = 'Especifica el numero de dias. Por defecto son 7 dias.')]
     [int16]$number_days = 7,
     
-    [Parameter(HelpMessage = 'No activar borrado de datos.')]
+    [Parameter(HelpMessage = 'No habilitar borrado de cache.')]
     [switch]$cache_off,
     
-    [Parameter(HelpMessage = 'Desinstalar versiones incompatibles de Spotify.')]
+    [Parameter(HelpMessage = 'Desinstalar versiones incompatibles por defecto.')]
     [switch]$confirm_uninstall_ms_spoti,
     
-    [Parameter(HelpMessage = 'Sobreescribir versiones anteriores/incompatibles de Spotify con una recomendada.')]
+    [Parameter(HelpMessage = 'Instalar ultima version dejando versiones incompatibles.')]
     [switch]$confirm_spoti_recomended_over,
     
-    [Parameter(HelpMessage = 'Desinstalar versiones anteriores/incompatibles de Spotify e instalar una recomendada.')]
+    [Parameter(HelpMessage = 'Desinstalar version incompatible e instalar ultima version.')]
     [switch]$confirm_spoti_recomended_unistall,
     
-    [Parameter(HelpMessage = 'Instalacion sin bloqueador de anuncios. PARA USUARIOS PREMIUM.')]
+    [Parameter(HelpMessage = 'Instalar teniendo premium.')]
     [switch]$premium,
     
-    [Parameter(HelpMessage = 'Iniciar Spotify despues de la instalacion.')]
+    [Parameter(HelpMessage = 'Inicio de spotify al terminar.')]
     [switch]$start_spoti,
     
-    [Parameter(HelpMessage = 'Desactivar funciones experimentales.')]
+    [Parameter(HelpMessage = 'Deshabilitar funciones experimentales.')]
     [switch]$exp_off,
 
-    [Parameter(HelpMessage = 'Funciones experimentales por defecto.')]
+    [Parameter(HelpMessage = 'Funciones experimentales basicas.')]
     [switch]$exp_standart,
     
-    [Parameter(HelpMessage = 'Sin eliminar icono de colaboraciones en playlists.')]
+    [Parameter(HelpMessage = 'No esconder icono de colaboraciones en playlists.')]
     [switch]$hide_col_icon_off,
     
-    [Parameter(HelpMessage = 'No activar botón de recomendado para ti en el menu lateral.')]
+    [Parameter(HelpMessage = 'No habilitar icono de -especialmente para ti- en el menu lateral.')]
     [switch]$made_for_you_off,
     
-    [Parameter(HelpMessage = 'No habilitar mejora de playlists.')]
+    [Parameter(HelpMessage = 'No habilitar mejoras de playlists.')]
     [switch]$enhance_playlist_off,
     
-    [Parameter(HelpMessage = 'No habilitar mejora de canciones que te gustan.')]
+    [Parameter(HelpMessage = 'No habilitar mejoras de canciones que te gustan.')]
     [switch]$enhance_like_off,
     
-    [Parameter(HelpMessage = 'No habilitar nueva discografia en artistas.')]
+    [Parameter(HelpMessage = 'No habilitar nuevos albumes en artistas.')]
     [switch]$new_artist_pages_off,
     
     [Parameter(HelpMessage = 'No habilitar nuevas letras.')]
     [switch]$new_lyrics_off,
     
-    [Parameter(HelpMessage = 'No habilitar excepciones de playlists.')]
+    [Parameter(HelpMessage = 'No habilitar expeciones en playlists.')]
     [switch]$ignore_in_recommendations_off,
 
-    [Parameter(HelpMessage = 'Habilitar ecualizador de audio.')]
+    [Parameter(HelpMessage = 'Habilitar auto-ecualizador en escritorio.')]
     [switch]$equalizer_off,
     
-    [Parameter(HelpMessage = 'Habilitar la visualizacion de una nueva y mejorada interfaz de usuario del selector de dispositivos.')]
+    [Parameter(HelpMessage = 'Habilitar nueva funcion de dispositivos de sonido.')]
     [switch]$device_new_off,
 
-    [Parameter(HelpMessage = 'habilitar la nueva estructura de inicio y navegación..')]
+    [Parameter(HelpMessage = 'Habilitar nueva navegacion.')]
     [switch]$enablenavalt,
     
-    [Parameter(HelpMessage = 'Seleccione el idioma que desee utilizar para la instalacion. El valor predeterminado es el idioma del sistema.')]
+    [Parameter(HelpMessage = 'Seleccionar idioma de instalar. Por defecto idioma de tu dispositivo.')]
     [Alias('l')]
     [string]$Language
 )
@@ -105,7 +105,7 @@ function Format-LanguageCode {
                 $returnCode = 'en'
                 break
             }
-            '^(ru|py)' {
+            '^(es|py)' {
                 $returnCode = 'es'
                 break
             }
@@ -136,12 +136,73 @@ function Set-ScriptLanguageStrings {
     param
     (
         [Parameter(Mandatory = $true,
-            HelpMessage = 'Codigo de idioma de dos letras.')]
+            HelpMessage = 'Codigo de lenguaje de dos letras.')]
         [string]$LanguageCode
     )
     
     begin {
         # Define language strings.
+        $langStringsEN = [PSCustomObject]@{
+            Author          = "Author:"
+            Incorrect       = "Oops, an incorrect value,"
+            Incorrect2      = "enter again through "
+            CuttError       = "Request error in cutt"
+            Download        = "Error downloading"
+            Download2       = "Will re-request in 5 seconds..."
+            Download3       = "Error again"
+            Download4       = "Try to check your internet connection and run the installation again"
+            Download5       = "Downloading Spotify"
+            StopScrpit      = "Script is stopped"
+            MsSpoti         = "The Microsoft Store version of Spotify has been detected which is not supported"
+            MsSpoti2        = "Uninstall Spotify Windows Store edition [Y/N]"
+            MsSpoti3        = "Automatic uninstalling Spotify MS..."
+            MsSpoti4        = "Uninstalling Spotify MS..."
+            Prem            = "Modification for premium account..."
+            DownBts         = "Downloading latest patch BTS..."
+            OldV            = "Found outdated version of Spotify"
+            OldV2           = "Your Spotify {0} version is outdated, it is recommended to upgrade to {1}"
+            OldV3           = "Want to update ? [Y/N]"
+            AutoUpd         = "Automatic update to the recommended version"
+            DelOrOver       = "Do you want to uninstall the current version of {0} or install over it? Y [Uninstall] / N [Install Over]"
+            DelOld          = "Uninstalling old Spotify..."
+            NewV            = "Unsupported version of Spotify found"
+            NewV2           = "Your Spotify {0} version hasn't been tested yet, currently it's a stable {1} version"
+            NewV3           = "Do you want to continue with {0} version (errors possible) ? [Y/N]"
+            Recom           = "Do you want to install the recommended {0} version ? [Y/N]"
+            DelNew          = "Uninstalling an untested Spotify..."
+            DownSpoti       = "Downloading and installing Spotify"
+            DownSpoti2      = "Please wait..."
+            PodcatsOff      = "Off Podcasts"
+            PodcastsOn      = "On Podcasts"
+            PodcatsSelect   = "Want to turn off podcasts ? [Y/N]"
+            DowngradeNote   = "It is recommended to block because there was a downgrade of Spotify"
+            UpdBlock        = "Updates blocked"
+            UpdUnblock      = "Updates are not blocked"
+            UpdSelect       = "Want to block updates ? [Y/N]"
+            CacheOn         = "Clear cache enabled ({0})"
+            CacheOff        = "Clearing the cache is not enabled"
+            CacheSelect     = "Want to set up automatic cache cleanup? [Y/N]"
+            CacheDays       = "Cache older: XX days to be cleared "
+            CacheDays2      = "Enter the number of days from 1 to 100"
+            NoVariable      = "Didn't find variable"
+            NoVariable2     = "in xpui.js"
+            NoVariable3     = "in licenses.html"
+            NoVariable4     = "in html"
+            ModSpoti        = "Patching Spotify..."
+            Error           = "Error"
+            FileLocBroken   = "Location of Spotify files is broken, uninstall the client and run the script again"
+            Spicetify       = "Spicetify detected"
+            NoRestore       = "SpotX has already been installed, xpui.js and xpui.css not found. `nPlease uninstall Spotify client and run Install.bat again"
+            ExpOff          = "Experimental features disabled"
+            NoRestore2      = "SpotX has already been installed, xpui.bak not found. `nPlease uninstall Spotify client and run Install.bat again"
+            UpdateBlocked   = "Spotify updates are already blocked"
+            UpdateError     = "Failed to block updates"
+            NoSpotifyExe    = "Could not find Spotify.exe"
+            InstallComplete = "installation completed"
+            HostDel         = "Unwanted URLs found in hosts file, trying to remove them..."
+            HostError       = "Something went wrong while editing the hosts file, edit it manually"
+        }
+        
         $langStringsES = [PSCustomObject]@{
             Author          = "Autor:"
             Incorrect       = "Ups, valor incorrecto,"
@@ -202,70 +263,6 @@ function Set-ScriptLanguageStrings {
             HostDel         = "URLs no necesarias encontradas, limpiando archivos..."
             HostError       = "Algo salio mal, edita el archivo manualmente"
         }
-        
-        $langStringsEN = [PSCustomObject]@{
-            Author          = "Author:"
-            Incorrect       = "Oops, an incorrect value,"
-            Incorrect2      = "enter again through "
-            Download        = "Error downloading"
-            Download2       = "Will re-request in 5 seconds..."
-            Download3       = "Error again"
-            Download4       = "Check your network settings and run the installation again"
-            Download5       = "Downloading Spotify"
-            Download6       = "Failed web request via curl"
-            StopScrpit      = "Script is stopped"
-            MsSpoti         = "The Microsoft Store version of Spotify has been detected which is not supported"
-            MsSpoti2        = "Uninstall Spotify Windows Store edition [Y/N]"
-            MsSpoti3        = "Automatic uninstalling Spotify MS..."
-            MsSpoti4        = "Uninstalling Spotify MS..."
-            Prem            = "Modification for premium account..."
-            DownBts         = "Downloading latest patch BTS..."
-            OldV            = "Found outdated version of Spotify"
-            OldV2           = "Your Spotify {0} version is outdated, it is recommended to upgrade to {1}"
-            OldV3           = "Want to update ? [Y/N]"
-            AutoUpd         = "Automatic update to the recommended version"
-            DelOrOver       = "Do you want to uninstall the current version of {0} or install over it? Y [Uninstall] / N [Install Over]"
-            DelOld          = "Uninstalling old Spotify..."
-            NewV            = "Unsupported version of Spotify found"
-            NewV2           = "Your Spotify {0} version hasn't been tested yet, currently it's a stable {1} version"
-            NewV3           = "Do you want to continue with {0} version (errors possible) ? [Y/N]"
-            Recom           = "Do you want to install the recommended {0} version ? [Y/N]"
-            DelNew          = "Uninstalling an untested Spotify..."
-            DownSpoti       = "Downloading and installing Spotify"
-            DownSpoti2      = "Please wait..."
-            PodcatsOff      = "Off Podcasts"
-            PodcastsOn      = "On Podcasts"
-            PodcatsSelect   = "Do you want to disable podcasts from the main page? [Y/N]"
-            DowngradeNote   = "It is recommended to block because there was a downgrade of Spotify"
-            UpdBlock        = "Spotify updates blocked"
-            UpdUnblock      = "Spotify updates are not blocked"
-            UpdSelect       = "Want to block Spotify updates? [Y/N]"
-            CacheOn         = "Clear cache enabled ({0})"
-            CacheOff        = "Clearing the cache is not enabled"
-            CacheSelect     = "Want to set up automatic cache cleanup? [Y/N]"
-            CacheDays       = "Cache older: XX days to be cleared "
-            CacheDays2      = "Enter the number of days from 1 to 100"
-            NoVariable      = "Didn't find variable"
-            NoVariable2     = "in xpui.js"
-            NoVariable3     = "in licenses.html"
-            NoVariable4     = "in html"
-            ModSpoti        = "Patching Spotify..."
-            Error           = "Error"
-            FileLocBroken   = "Location of Spotify files is broken, uninstall the client and run the script again"
-            Spicetify       = "Spicetify detected"
-            NoRestore       = "SpotX has already been installed, xpui.js and xpui.css not found. `nPlease uninstall Spotify client and run Install.bat again"
-            ExpSpotify      = "Experimental features operated by Spotify"
-            ExpStandart     = "Experimental features of SpotX are not included"
-            NoRestore2      = "SpotX has already been installed, xpui.bak not found. `nPlease uninstall Spotify client and run Install.bat again"
-            UpdateBlocked   = "Spotify updates are already blocked"
-            UpdateError     = "Failed to block updates"
-            NoSpotifyExe    = "Could not find Spotify.exe"
-            InstallComplete = "installation completed"
-            HostInfo        = "Unwanted URLs found in hosts file"
-            HostBak         = "Backing up hosts.bak..."
-            HostDel         = "Trying to remove unwanted URLs from the original hosts file..."
-            HostError       = "Something went wrong while editing the hosts file, edit it manually or run the script as administrator"
-        }
     }
     
     process {
@@ -297,13 +294,13 @@ $langCode = Format-LanguageCode -LanguageCode $Language
 # Set script language strings.
 $lang = Set-ScriptLanguageStrings -LanguageCode $langCode
 
-# Set variable 'ru'.
-if ($langCode -eq 'es') { $ru = $true }
+# Set variable 'es'.
+if ($langCode -eq 'es') { $es = $true }
 
 
 Write-Host "*****************"
 Write-Host ($lang).Author"" -NoNewline
-Write-Host "@5qw (aka. XYZ)" -ForegroundColor DarkYellow
+Write-Host "@5qw (xyz)" -ForegroundColor DarkYellow
 Write-Host "*****************"`n
 
 
@@ -349,9 +346,9 @@ function Check_verison_clients($param2) {
     if ($param2 -eq "online") {
         $ProgressPreference = 'SilentlyContinue' # Hiding Progress Bars
         $readme = Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/5qw/Spotify/main/README.md
-        $v = $readme.RawContent | Select-String "Version oficial recomendada \[\d+\.\d+\.\d+\.\d+\]" -AllMatches
+        $v = $readme.RawContent | Select-String "Version recomendada \[\d+\.\d+\.\d+\.\d+\]" -AllMatches
         $ver = $v.Matches.Value
-        $ver = $ver -replace 'Version oficial recomendada \[(\d+\.\d+\.\d+\.\d+)\]', '$1'
+        $ver = $ver -replace 'Version recomendada \[(\d+\.\d+\.\d+\.\d+)\]', '$1'
         return $ver
     }
     # Check version Spotify offline
@@ -1059,7 +1056,7 @@ if ($test_spa -and $test_js) {
 if (Test-Path $xpui_js_patch) {
     Write-Host ($lang).Spicetify`n
 
-    # Delete all files except "en", "ru" and "__longest"
+    # Delete all files except "en", "es" and "__longest"
     if ($ru) {
         $patch_lang = "$env:APPDATA\Spotify\Apps\xpui\i18n"
         Remove-Item $patch_lang -Exclude *en*, *es*, *__longest* -Recurse
@@ -1393,7 +1390,7 @@ If (Test-Path $xpui_spa_patch) {
     $writer.Close()
     
     if ($ru) {
-        # Additional translation of the ru.json file
+        # Additional translation of the es.json file
         $zip.Entries | Where-Object FullName -like '*es.json' | ForEach-Object {
             $readerjson = New-Object System.IO.StreamReader($_.Open())
             $xpui_ru = $readerjson.ReadToEnd()
@@ -1403,7 +1400,7 @@ If (Test-Path $xpui_spa_patch) {
             $xpui_ru = Helper -paramname "EsTranslate"
             $writer = New-Object System.IO.StreamWriter($_.Open())
             $writer.BaseStream.SetLength(0)
-            $writer.Write($xpui_ru)
+            $writer.Write($xpui_es)
             $writer.Close()
         }
     }
@@ -1428,7 +1425,7 @@ If (Test-Path $xpui_spa_patch) {
 # Delete all files except "en" and "ru"
 if ($ru) {
     $patch_lang = "$spotifyDirectory\locales"
-    Remove-Item $patch_lang -Exclude *en*, *ru* -Recurse
+    Remove-Item $patch_lang -Exclude *en*, *es* -Recurse
 }
 
 # Shortcut Spotify.lnk
