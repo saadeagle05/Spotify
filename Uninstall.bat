@@ -1,9 +1,9 @@
 @echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
 echo *****************
-echo Author: @5qw aka. XYZ
+echo Author: @5qw
 echo *****************
-echo Desinstalando...
+echo Removing Patch...
 
 
 if exist "%Appdata%\Spotify\chrome_elf_bak.dll" ( 
@@ -76,5 +76,5 @@ DEL !cSctVBS! /f /q
 )
 ) 
 
-echo Desinstalacion compeltada
+echo Patch successfully removed
 pause
