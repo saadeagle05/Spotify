@@ -71,6 +71,12 @@ param
 
     [Parameter(HelpMessage = 'Habilitar nueva navegacion.')]
     [switch]$enablenavalt,
+
+    #[Parameter(HelpMessage = 'Connect unlock test.')]
+    #[switch]$testconnect,
+
+    [Parameter(HelpMessage = 'No crear acceso directo en el escritorio.')]
+    [switch]$no_shortcut,
     
     [Parameter(HelpMessage = 'Seleccionar idioma de instalar. Por defecto idioma de tu dispositivo.')]
     [Alias('l')]
@@ -272,7 +278,7 @@ function Set-ScriptLanguageStrings {
                 $langStrings = $langStringsEN
                 break
             }
-            'ru' {
+            'es' {
                 $langStrings = $langStringsES
                 break
             }
@@ -320,10 +326,12 @@ catch {
 $spotifyDirectory = "$env:APPDATA\Spotify"
 $spotifyDirectory2 = "$env:LOCALAPPDATA\Spotify"
 $spotifyExecutable = "$spotifyDirectory\Spotify.exe"
+$exe_bak = "$spotifyDirectory\Spotify.bak"
 $chrome_elf = "$spotifyDirectory\chrome_elf.dll"
 $chrome_elf_bak = "$spotifyDirectory\chrome_elf_bak.dll"
 $cache_folder = "$env:APPDATA\Spotify\cache"
 $spotifyUninstall = "$env:TEMP\SpotifyUninstall.exe"
+$start_menu = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Spotify.lnk"
 $upgrade_client = $false
 
 function incorrectValue {
@@ -355,6 +363,11 @@ function Check_verison_clients($param2) {
     if ($param2 -eq "offline") {
         $check_offline = (Get-Item $spotifyExecutable).VersionInfo.FileVersion
         return $check_offline
+    }
+    # Check version Spotify.bak
+    if ($param2 -eq "Spotify.bak") {
+        $check_offline_bak = (Get-Item $exe_bak).VersionInfo.FileVersion
+        return $check_offline_bak
     }
 }
 function unlockFolder {
@@ -874,6 +887,10 @@ function Helper($paramname) {
                 FullScreenAd        = '(return|.=.=>)"free"===(.+?)(return|.=.=>)"premium"===', '$1"premium"===$2$3"free"===' # Fullscreen act., removing upgrade menu, button
                 PlaylistSponsorsOff = 'allSponsorships' , '' # Disabling a playlist sponsor
             }
+            #if (!($testconnect)) {
+            #    $offadson_fullscreen.Remove('ConnectUnlock'), $offadson_fullscreen.Remove('ConnectUnlock2'),
+            #    $offadson_fullscreen.Remove('ConnectUnlock3'), $offadson_fullscreen.Remove('ConnectUnlock4')
+            #}
             $n = ($lang).NoVariable2
             $contents = $offadson_fullscreen
             $paramdata = $xpui_js
